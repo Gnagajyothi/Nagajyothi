@@ -1,0 +1,29 @@
+<p>userlist works!</p>
+<form (submit)="adduser()">
+    <label for="userName">
+        Enter new user name :
+    </label>
+    <input type="text" name="userName" id="userName" [(ngModel)]="newuser">
+    <br/><br/>
+    <label for="password">
+        Enter password :
+    </label>
+    <input type="password" name="password" id="password" [(ngModel)]="password">
+    
+
+
+</form>
+<ol style="background-color: rgb(235, 160, 48);">
+    <li *ngFor="let user of listofusers">
+        {{user}} is present
+    </li>
+</ol> 
+<button type="submit">add</button>
+<!-- <p *ngFor="let user of listofusers">
+{{user}}
+<span>is good person</span>
+</p>  -->
+<!-- <p *ngFor="let sum of listofusers"> -->
+    <!-- {{sum}} -->
+    <!-- <spn>very good</span> -->
+<!-- </p> -->
